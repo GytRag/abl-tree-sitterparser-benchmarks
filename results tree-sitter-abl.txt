@@ -1,0 +1,28 @@
+======================================================
+Benchmarking Tree-sitter (WASM) on: .\corpus\small.p
+======================================================
+[Full Parse] Average Latency:    0.499 ms
+[Full Parse] Throughput:         3949.6 KB/s
+[Memory]     Heap Allocated:     0.17 MB
+[Incremental Edit] Re-parse Time: 0.247 ms
+======================================================
+
+======================================================
+Benchmarking Tree-sitter (WASM) on: .\corpus\medium.cls
+======================================================
+[Full Parse] Average Latency:    3.658 ms
+[Full Parse] Throughput:         5581.2 KB/s
+[Memory]     Heap Allocated:     0.20 MB
+[Incremental Edit] Re-parse Time: 1.843 ms
+======================================================
+
+======================================================
+Benchmarking Tree-sitter (WASM) on: .\corpus\large.p
+======================================================
+[Full Parse] Average Latency:    6.643 ms
+[Full Parse] Throughput:         43066.6 KB/s
+[Memory]     Heap Allocated:     -0.37 MB
+[Incremental Edit] Re-parse Time: 6.902 ms
+======================================================
+
+

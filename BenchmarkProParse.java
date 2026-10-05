@@ -1,6 +1,5 @@
 import java.io.File;
-import org.prorefactor.core.JPNode;
-import org.prorefactor.refactor.ParseUnit;
+import org.prorefactor.treeparser.ParseUnit;
 
 public class BenchmarkProParse {
     public static void main(String[] args) throws Exception {

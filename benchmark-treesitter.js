@@ -1,5 +1,5 @@
 const fs = require('fs');
-const Parser = require('web-tree-sitter');
+const { Parser, Language } = require('web-tree-sitter');
 
 async function runBenchmark(filePath, wasmPath) {
   console.log(`\n======================================================`);
@@ -8,7 +8,7 @@ async function runBenchmark(filePath, wasmPath) {
 
   await Parser.init();
   const parser = new Parser();
-  const ABL = await Parser.Language.load(wasmPath);
+  const ABL = await Language.load(wasmPath);
   parser.setLanguage(ABL);
 
   const sourceCode = fs.readFileSync(filePath, 'utf8');
