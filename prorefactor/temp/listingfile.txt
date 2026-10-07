@@ -1,0 +1,33 @@
+0 4 1 globdef WIN95-BTN TRUE
+0 5 1 scopdef USE-3D YES
+0 39 1 scopdef datatypes CHARACTER,DATE,DECIMAL,LOGICAL,INTEGER,RECID
+0 40 1 scopdef FRAME-NAME prop_sht
+0 42 1 scopdef sicon_txt IF _C._SMALL-ICON eq '' THEN ''                         ELSE ENTRY(NUM-ENTRIES(_C._SMALL-ICON,'/'),_C._SMALL-ICON,'/')
+0 45 1 scopdef ABL_STATE "ABL"
+0 46 1 scopdef IDE_STATE "IDE"
+0 70 49 macroref adeicon-dir
+0 0 0 macrorefend
+0 71 37 macroref bitmap-ext
+0 0 0 macrorefend
+0 216 30 macroref window-system
+0 0 0 macrorefend
+0 216 25 ampif false
+0 217 33 ampelse ?
+0 217 44 ampendif
+0 278 25 macroref window-system
+0 0 0 macrorefend
+0 278 1 globdef SKP &IF "MS-WIN95" = "OSF/Motif" &THEN SKIP &ELSE &ENDIF
+0 283 1 ampif false
+0 285 1 ampelse ?
+0 286 4 scopdef procerror RETURN ERROR.
+0 287 1 ampendif
+0 291 6 macroref window-system
+0 0 0 macrorefend
+0 291 1 ampif true
+0 294 1 ampelse true
+0 297 1 ampendif
+0 297 1 ampelse ?
+0 328 3 ampif false
+0 334 3 ampelse ?
+0 338 3 ampendif
+0 0 0 fileindex 0 C:\Users\graginskas\vsProjects\ASTvsProParse\.\corpus\large.p
