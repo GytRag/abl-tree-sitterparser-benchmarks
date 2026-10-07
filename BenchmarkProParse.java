@@ -1,5 +1,8 @@
 import java.io.File;
+import java.nio.file.Files;
+import java.util.Arrays;
 import org.prorefactor.treeparser.ParseUnit;
+import com.joanju.proparse.Environment;
 
 public class BenchmarkProParse {
     public static void main(String[] args) throws Exception {
@@ -9,6 +12,15 @@ public class BenchmarkProParse {
         }
 
         File file = new File(args[0]);
+
+        String propath = String.join(",",
+            new File("corpus/resources/ade").getAbsolutePath(),
+            new File("corpus/resources/ade/auditing").getAbsolutePath(),
+            new File("corpus/resources/ade/wrappers").getAbsolutePath(),
+            new File("corpus").getAbsolutePath()
+        );
+        Environment.instance().configSet("propath", propath);
+
         System.out.println("\n======================================================");
         System.out.println("Benchmarking ProParse on: " + file.getName());
         System.out.println("======================================================");
@@ -39,7 +51,37 @@ public class BenchmarkProParse {
 
         System.out.printf("[Full Parse] Average Latency: %.3f ms%n", avgMs);
         System.out.printf("[Memory]     Heap Allocated:   %.2f MB%n", Math.max(0, memUsedMb));
-        System.out.println("[Incremental Edit]             NOT SUPPORTED (Full re-parse required)");
+
+        byte[] originalSource = Files.readAllBytes(file.toPath());
+        byte[] editedSource = Arrays.copyOf(originalSource, originalSource.length + 1);
+        editedSource[originalSource.length] = ' ';
+        String fileName = file.getName();
+        int extensionIndex = fileName.lastIndexOf('.');
+        String suffix = extensionIndex >= 0 ? fileName.substring(extensionIndex) : ".p";
+        File editedFile = File.createTempFile("proparse-edit-", suffix, file.getAbsoluteFile().getParentFile());
+
+        try {
+            Files.write(editedFile.toPath(), editedSource);
+            editedFile.deleteOnExit();
+
+            for (int i = 0; i < warmupRuns; i++) {
+                ParseUnit pu = new ParseUnit(editedFile);
+                pu.treeParser01();
+            }
+
+            long editStart = System.nanoTime();
+            for (int i = 0; i < benchRuns; i++) {
+                ParseUnit pu = new ParseUnit(editedFile);
+                pu.treeParser01();
+            }
+            long editEnd = System.nanoTime();
+            double avgEditReparseMs = ((editEnd - editStart) / 1_000_000.0) / benchRuns;
+
+            System.out.printf("[Edit + Full Re-parse] Average Latency: %.3f ms%n", avgEditReparseMs);
+        } finally {
+            Files.deleteIfExists(editedFile.toPath());
+        }
+
         System.out.println("======================================================\n");
     }
 }

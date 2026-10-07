@@ -1,0 +1,23 @@
+======================================================
+Benchmarking ProParse on: small.p
+======================================================
+[Full Parse] Average Latency: 3.402 ms
+[Memory]     Heap Allocated:   8.00 MB
+[Incremental Edit]             NOT SUPPORTED (Full re-parse required)
+======================================================
+
+======================================================
+Benchmarking ProParse on: medium.cls
+======================================================
+[Full Parse] Average Latency: 12.929 ms
+[Memory]     Heap Allocated:   9.68 MB
+[Incremental Edit]             NOT SUPPORTED (Full re-parse required)
+======================================================
+
+======================================================
+Benchmarking ProParse on: large.p
+======================================================
+[Full Parse] Average Latency: 89.202 ms
+[Memory]     Heap Allocated:   113.23 MB
+[Incremental Edit]             NOT SUPPORTED (Full re-parse required)
+======================================================

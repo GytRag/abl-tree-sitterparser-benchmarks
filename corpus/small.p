@@ -9,6 +9,21 @@ define variable dTotalDiscount       as decimal no-undo.
 define variable iOrders              as integer no-undo.
 define variable dTotalSum            as decimal no-undo.
 
+define temp-table Customer
+    field CustNum as int
+    field Name    as char.
+
+define temp-table Order
+    field Carrier as char
+    field CustNum as int.
+
+define temp-table OrderLine
+    field Price         as decimal
+    field ExtendedPrice as decimal
+    field Qty           as int
+    field Discount      as decimal
+    field OrderNum      as int.
+
 output to "findOrders.txt".
 
 for each Customer no-lock: 

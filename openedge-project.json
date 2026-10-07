@@ -1,0 +1,28 @@
+{
+  "name": "ASTvsProParse",
+  "version": "1.0.0",
+  "oeversion": "12.8",
+  "graphicalMode": true,
+  "buildPath": [
+    {
+      "type": "source",
+      "path": "corpus"
+    },
+    {
+      "type": "propath",
+      "path": "corpus/resources/ade"
+    },
+    {
+      "type": "propath",
+      "path": "corpus/resources/ade/auditing"
+    },
+    {
+      "type": "propath",
+      "path": "corpus/resources/ade/wrappers"
+    },
+    {
+      "type": "propath",
+      "path": "corpus"
+    }
+  ]
+}
