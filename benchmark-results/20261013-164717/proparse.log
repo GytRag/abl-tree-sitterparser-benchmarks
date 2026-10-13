@@ -1,0 +1,196 @@
+﻿ProParse benchmark runs
+
+=== ProParse | small.p | trial 1 ===
+
+======================================================
+Benchmarking ProParse on: small.p
+======================================================
+[Full Parse] Average Latency: 3.455 ms
+[Memory]     Heap Allocated:   8.96 MB
+[Edit + Full Re-parse] Average Latency: 2.386 ms
+======================================================
+
+
+Peak working set: 10.28 MB; exit code: 0
+
+=== ProParse | small.p | trial 2 ===
+
+======================================================
+Benchmarking ProParse on: small.p
+======================================================
+[Full Parse] Average Latency: 3.400 ms
+[Memory]     Heap Allocated:   8.96 MB
+[Edit + Full Re-parse] Average Latency: 2.276 ms
+======================================================
+
+
+Peak working set: 10.36 MB; exit code: 0
+
+=== ProParse | small.p | trial 3 ===
+
+======================================================
+Benchmarking ProParse on: small.p
+======================================================
+[Full Parse] Average Latency: 3.202 ms
+[Memory]     Heap Allocated:   8.96 MB
+[Edit + Full Re-parse] Average Latency: 2.358 ms
+======================================================
+
+
+Peak working set: 10.32 MB; exit code: 0
+
+=== ProParse | small.p | trial 4 ===
+
+======================================================
+Benchmarking ProParse on: small.p
+======================================================
+[Full Parse] Average Latency: 3.416 ms
+[Memory]     Heap Allocated:   8.96 MB
+[Edit + Full Re-parse] Average Latency: 2.489 ms
+======================================================
+
+
+Peak working set: 10.24 MB; exit code: 0
+
+=== ProParse | small.p | trial 5 ===
+
+======================================================
+Benchmarking ProParse on: small.p
+======================================================
+[Full Parse] Average Latency: 3.206 ms
+[Memory]     Heap Allocated:   8.96 MB
+[Edit + Full Re-parse] Average Latency: 2.255 ms
+======================================================
+
+
+Peak working set: 10.34 MB; exit code: 0
+
+=== ProParse | medium.cls | trial 1 ===
+
+======================================================
+Benchmarking ProParse on: medium.cls
+======================================================
+[Full Parse] Average Latency: 11.936 ms
+[Memory]     Heap Allocated:   25.81 MB
+[Edit + Full Re-parse] Average Latency: 9.381 ms
+======================================================
+
+
+Peak working set: 10.32 MB; exit code: 0
+
+=== ProParse | medium.cls | trial 2 ===
+
+======================================================
+Benchmarking ProParse on: medium.cls
+======================================================
+[Full Parse] Average Latency: 12.161 ms
+[Memory]     Heap Allocated:   9.60 MB
+[Edit + Full Re-parse] Average Latency: 9.332 ms
+======================================================
+
+
+Peak working set: 10.33 MB; exit code: 0
+
+=== ProParse | medium.cls | trial 3 ===
+
+======================================================
+Benchmarking ProParse on: medium.cls
+======================================================
+[Full Parse] Average Latency: 13.061 ms
+[Memory]     Heap Allocated:   9.56 MB
+[Edit + Full Re-parse] Average Latency: 9.784 ms
+======================================================
+
+
+Peak working set: 10.33 MB; exit code: 0
+
+=== ProParse | medium.cls | trial 4 ===
+
+======================================================
+Benchmarking ProParse on: medium.cls
+======================================================
+[Full Parse] Average Latency: 17.270 ms
+[Memory]     Heap Allocated:   18.63 MB
+[Edit + Full Re-parse] Average Latency: 13.154 ms
+======================================================
+
+
+Peak working set: 10.3 MB; exit code: 0
+
+=== ProParse | medium.cls | trial 5 ===
+
+======================================================
+Benchmarking ProParse on: medium.cls
+======================================================
+[Full Parse] Average Latency: 11.997 ms
+[Memory]     Heap Allocated:   17.95 MB
+[Edit + Full Re-parse] Average Latency: 9.227 ms
+======================================================
+
+
+Peak working set: 10.32 MB; exit code: 0
+
+=== ProParse | large.p | trial 1 ===
+
+======================================================
+Benchmarking ProParse on: large.p
+======================================================
+[Full Parse] Average Latency: 96.014 ms
+[Memory]     Heap Allocated:   110.89 MB
+[Edit + Full Re-parse] Average Latency: 92.983 ms
+======================================================
+
+
+Peak working set: 10.34 MB; exit code: 0
+
+=== ProParse | large.p | trial 2 ===
+
+======================================================
+Benchmarking ProParse on: large.p
+======================================================
+[Full Parse] Average Latency: 90.244 ms
+[Memory]     Heap Allocated:   121.41 MB
+[Edit + Full Re-parse] Average Latency: 74.294 ms
+======================================================
+
+
+Peak working set: 10.32 MB; exit code: 0
+
+=== ProParse | large.p | trial 3 ===
+
+======================================================
+Benchmarking ProParse on: large.p
+======================================================
+[Full Parse] Average Latency: 99.532 ms
+[Memory]     Heap Allocated:   113.35 MB
+[Edit + Full Re-parse] Average Latency: 82.608 ms
+======================================================
+
+
+Peak working set: 10.28 MB; exit code: 0
+
+=== ProParse | large.p | trial 4 ===
+
+======================================================
+Benchmarking ProParse on: large.p
+======================================================
+[Full Parse] Average Latency: 87.802 ms
+[Memory]     Heap Allocated:   117.12 MB
+[Edit + Full Re-parse] Average Latency: 73.544 ms
+======================================================
+
+
+Peak working set: 10.34 MB; exit code: 0
+
+=== ProParse | large.p | trial 5 ===
+
+======================================================
+Benchmarking ProParse on: large.p
+======================================================
+[Full Parse] Average Latency: 86.382 ms
+[Memory]     Heap Allocated:   161.94 MB
+[Edit + Full Re-parse] Average Latency: 71.586 ms
+======================================================
+
+
+Peak working set: 10.36 MB; exit code: 0

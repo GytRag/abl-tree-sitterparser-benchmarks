@@ -1,0 +1,211 @@
+﻿Tree-sitter benchmark runs
+
+=== Tree-sitter | small.p | trial 1 ===
+
+======================================================
+Benchmarking Tree-sitter (WASM) on: C:\Users\graginskas\vsProjects\ASTvsProParse\corpus\small.p
+======================================================
+[Full Parse] Average Latency:    0.552 ms
+[Full Parse] Throughput:         4198.9 KB/s
+[Memory]     Heap Allocated:     0.18 MB
+[Incremental Edit] Re-parse Time: 0.090 ms
+======================================================
+
+
+Peak working set: 193.02 MB; exit code: 0
+
+=== Tree-sitter | small.p | trial 2 ===
+
+======================================================
+Benchmarking Tree-sitter (WASM) on: C:\Users\graginskas\vsProjects\ASTvsProParse\corpus\small.p
+======================================================
+[Full Parse] Average Latency:    0.564 ms
+[Full Parse] Throughput:         4107.7 KB/s
+[Memory]     Heap Allocated:     0.18 MB
+[Incremental Edit] Re-parse Time: 0.090 ms
+======================================================
+
+
+Peak working set: 193.45 MB; exit code: 0
+
+=== Tree-sitter | small.p | trial 3 ===
+
+======================================================
+Benchmarking Tree-sitter (WASM) on: C:\Users\graginskas\vsProjects\ASTvsProParse\corpus\small.p
+======================================================
+[Full Parse] Average Latency:    0.546 ms
+[Full Parse] Throughput:         4242.7 KB/s
+[Memory]     Heap Allocated:     0.18 MB
+[Incremental Edit] Re-parse Time: 0.120 ms
+======================================================
+
+
+Peak working set: 193.54 MB; exit code: 0
+
+=== Tree-sitter | small.p | trial 4 ===
+
+======================================================
+Benchmarking Tree-sitter (WASM) on: C:\Users\graginskas\vsProjects\ASTvsProParse\corpus\small.p
+======================================================
+[Full Parse] Average Latency:    0.614 ms
+[Full Parse] Throughput:         3772.6 KB/s
+[Memory]     Heap Allocated:     0.18 MB
+[Incremental Edit] Re-parse Time: 0.095 ms
+======================================================
+
+
+Peak working set: 193.22 MB; exit code: 0
+
+=== Tree-sitter | small.p | trial 5 ===
+
+======================================================
+Benchmarking Tree-sitter (WASM) on: C:\Users\graginskas\vsProjects\ASTvsProParse\corpus\small.p
+======================================================
+[Full Parse] Average Latency:    0.519 ms
+[Full Parse] Throughput:         4463.6 KB/s
+[Memory]     Heap Allocated:     0.18 MB
+[Incremental Edit] Re-parse Time: 0.075 ms
+======================================================
+
+
+Peak working set: 193.31 MB; exit code: 0
+
+=== Tree-sitter | medium.cls | trial 1 ===
+
+======================================================
+Benchmarking Tree-sitter (WASM) on: C:\Users\graginskas\vsProjects\ASTvsProParse\corpus\medium.cls
+======================================================
+[Full Parse] Average Latency:    3.649 ms
+[Full Parse] Throughput:         5594.9 KB/s
+[Memory]     Heap Allocated:     0.20 MB
+[Incremental Edit] Re-parse Time: 1.731 ms
+======================================================
+
+
+Peak working set: 194.47 MB; exit code: 0
+
+=== Tree-sitter | medium.cls | trial 2 ===
+
+======================================================
+Benchmarking Tree-sitter (WASM) on: C:\Users\graginskas\vsProjects\ASTvsProParse\corpus\medium.cls
+======================================================
+[Full Parse] Average Latency:    3.550 ms
+[Full Parse] Throughput:         5749.7 KB/s
+[Memory]     Heap Allocated:     0.20 MB
+[Incremental Edit] Re-parse Time: 1.827 ms
+======================================================
+
+
+Peak working set: 191.13 MB; exit code: 0
+
+=== Tree-sitter | medium.cls | trial 3 ===
+
+======================================================
+Benchmarking Tree-sitter (WASM) on: C:\Users\graginskas\vsProjects\ASTvsProParse\corpus\medium.cls
+======================================================
+[Full Parse] Average Latency:    3.682 ms
+[Full Parse] Throughput:         5544.4 KB/s
+[Memory]     Heap Allocated:     0.20 MB
+[Incremental Edit] Re-parse Time: 2.036 ms
+======================================================
+
+
+Peak working set: 190.73 MB; exit code: 0
+
+=== Tree-sitter | medium.cls | trial 4 ===
+
+======================================================
+Benchmarking Tree-sitter (WASM) on: C:\Users\graginskas\vsProjects\ASTvsProParse\corpus\medium.cls
+======================================================
+[Full Parse] Average Latency:    3.849 ms
+[Full Parse] Throughput:         5303.1 KB/s
+[Memory]     Heap Allocated:     0.20 MB
+[Incremental Edit] Re-parse Time: 2.046 ms
+======================================================
+
+
+Peak working set: 191.14 MB; exit code: 0
+
+=== Tree-sitter | medium.cls | trial 5 ===
+
+======================================================
+Benchmarking Tree-sitter (WASM) on: C:\Users\graginskas\vsProjects\ASTvsProParse\corpus\medium.cls
+======================================================
+[Full Parse] Average Latency:    3.485 ms
+[Full Parse] Throughput:         5857.5 KB/s
+[Memory]     Heap Allocated:     0.20 MB
+[Incremental Edit] Re-parse Time: 1.859 ms
+======================================================
+
+
+Peak working set: 191.1 MB; exit code: 0
+
+=== Tree-sitter | large.p | trial 1 ===
+
+======================================================
+Benchmarking Tree-sitter (WASM) on: C:\Users\graginskas\vsProjects\ASTvsProParse\corpus\large.p
+======================================================
+[Full Parse] Average Latency:    6.733 ms
+[Full Parse] Throughput:         42492.6 KB/s
+[Memory]     Heap Allocated:     -0.37 MB
+[Incremental Edit] Re-parse Time: 6.677 ms
+======================================================
+
+
+Peak working set: 191.23 MB; exit code: 0
+
+=== Tree-sitter | large.p | trial 2 ===
+
+======================================================
+Benchmarking Tree-sitter (WASM) on: C:\Users\graginskas\vsProjects\ASTvsProParse\corpus\large.p
+======================================================
+[Full Parse] Average Latency:    6.964 ms
+[Full Parse] Throughput:         41082.4 KB/s
+[Memory]     Heap Allocated:     -0.37 MB
+[Incremental Edit] Re-parse Time: 6.973 ms
+======================================================
+
+
+Peak working set: 191.79 MB; exit code: 0
+
+=== Tree-sitter | large.p | trial 3 ===
+
+======================================================
+Benchmarking Tree-sitter (WASM) on: C:\Users\graginskas\vsProjects\ASTvsProParse\corpus\large.p
+======================================================
+[Full Parse] Average Latency:    6.968 ms
+[Full Parse] Throughput:         41054.8 KB/s
+[Memory]     Heap Allocated:     -0.38 MB
+[Incremental Edit] Re-parse Time: 6.841 ms
+======================================================
+
+
+Peak working set: 191.68 MB; exit code: 0
+
+=== Tree-sitter | large.p | trial 4 ===
+
+======================================================
+Benchmarking Tree-sitter (WASM) on: C:\Users\graginskas\vsProjects\ASTvsProParse\corpus\large.p
+======================================================
+[Full Parse] Average Latency:    7.412 ms
+[Full Parse] Throughput:         38599.7 KB/s
+[Memory]     Heap Allocated:     -0.36 MB
+[Incremental Edit] Re-parse Time: 7.334 ms
+======================================================
+
+
+Peak working set: 191.42 MB; exit code: 0
+
+=== Tree-sitter | large.p | trial 5 ===
+
+======================================================
+Benchmarking Tree-sitter (WASM) on: C:\Users\graginskas\vsProjects\ASTvsProParse\corpus\large.p
+======================================================
+[Full Parse] Average Latency:    6.762 ms
+[Full Parse] Throughput:         42308.6 KB/s
+[Memory]     Heap Allocated:     -0.38 MB
+[Incremental Edit] Re-parse Time: 6.431 ms
+======================================================
+
+
+Peak working set: 192.27 MB; exit code: 0
