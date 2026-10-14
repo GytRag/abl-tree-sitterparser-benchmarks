@@ -119,7 +119,8 @@ foreach ($case in $cases) {
             $output = "$stdout`n$stderr"
             $parseMatch = [regex]::Match($output, '\[Full Parse\] Average Latency:\s*([\d.]+)\s*ms')
             $throughputMatch = [regex]::Match($output, '\[Full Parse\] Throughput:\s*([\d.]+)\s*KB/s')
-            $reparseMatch = [regex]::Match($output, '\[(?:Incremental Edit|Edit \+ Full Re-parse)\].*?:\s*([\d.]+)\s*ms')
+            $incrementalMatch = [regex]::Match($output, '\[Incremental Edit\] Re-parse Time:\s*([\d.]+)\s*ms')
+            $editedFullReparseMatch = [regex]::Match($output, '\[Edit \+ Full Re-parse\] Average Latency:\s*([\d.]+)\s*ms')
 
             $rows.Add([pscustomobject]@{
                 Parser = $parser
@@ -127,7 +128,8 @@ foreach ($case in $cases) {
                 Trial = $run
                 AverageParseMs = if ($parseMatch.Success) { [double]$parseMatch.Groups[1].Value } else { $null }
                 ThroughputKBps = if ($throughputMatch.Success) { [double]$throughputMatch.Groups[1].Value } else { $null }
-                ReparseMs = if ($reparseMatch.Success) { [double]$reparseMatch.Groups[1].Value } else { $null }
+                IncrementalEditMs = if ($incrementalMatch.Success) { [double]$incrementalMatch.Groups[1].Value } else { $null }
+                EditedFullReparseMs = if ($editedFullReparseMatch.Success) { [double]$editedFullReparseMatch.Groups[1].Value } else { $null }
                 PeakWorkingSetMB = $peakWorkingSetMB
                 ExitCode = $exitCode
             })
@@ -142,11 +144,13 @@ $statistics = foreach ($group in ($rows | Group-Object Parser, File)) {
     $groupRows = @($group.Group)
     $parseValues = @($groupRows | Where-Object { $null -ne $_.AverageParseMs } | ForEach-Object { [double]$_.AverageParseMs })
     $throughputValues = @($groupRows | Where-Object { $null -ne $_.ThroughputKBps } | ForEach-Object { [double]$_.ThroughputKBps })
-    $reparseValues = @($groupRows | Where-Object { $null -ne $_.ReparseMs } | ForEach-Object { [double]$_.ReparseMs })
+    $incrementalValues = @($groupRows | Where-Object { $null -ne $_.IncrementalEditMs } | ForEach-Object { [double]$_.IncrementalEditMs })
+    $editedFullReparseValues = @($groupRows | Where-Object { $null -ne $_.EditedFullReparseMs } | ForEach-Object { [double]$_.EditedFullReparseMs })
     $memoryValues = @($groupRows | ForEach-Object { [double]$_.PeakWorkingSetMB })
     $parseMeasure = $parseValues | Measure-Object -Average -Minimum -Maximum
     $throughputMeasure = $throughputValues | Measure-Object -Average -Minimum -Maximum
-    $reparseMeasure = $reparseValues | Measure-Object -Average -Minimum -Maximum
+    $incrementalMeasure = $incrementalValues | Measure-Object -Average -Minimum -Maximum
+    $editedFullReparseMeasure = $editedFullReparseValues | Measure-Object -Average -Minimum -Maximum
     $memoryMeasure = $memoryValues | Measure-Object -Average -Minimum -Maximum
 
     [pscustomobject]@{
@@ -159,8 +163,10 @@ $statistics = foreach ($group in ($rows | Group-Object Parser, File)) {
         AverageParseMsMax = $parseMeasure.Maximum
         ThroughputKBpsMean = $throughputMeasure.Average
         ThroughputKBpsMedian = Get-Median $throughputValues
-        ReparseMsMean = $reparseMeasure.Average
-        ReparseMsMedian = Get-Median $reparseValues
+        IncrementalEditMsMean = $incrementalMeasure.Average
+        IncrementalEditMsMedian = Get-Median $incrementalValues
+        EditedFullReparseMsMean = $editedFullReparseMeasure.Average
+        EditedFullReparseMsMedian = Get-Median $editedFullReparseValues
         PeakWorkingSetMBMean = $memoryMeasure.Average
         PeakWorkingSetMBMedian = Get-Median $memoryValues
         PeakWorkingSetMBMin = $memoryMeasure.Minimum

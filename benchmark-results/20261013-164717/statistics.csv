@@ -1,7 +1,0 @@
-﻿"Parser","File","Trials","AverageParseMsMean","AverageParseMsMedian","AverageParseMsMin","AverageParseMsMax","ThroughputKBpsMean","ThroughputKBpsMedian","ReparseMsMean","ReparseMsMedian","PeakWorkingSetMBMean","PeakWorkingSetMBMedian","PeakWorkingSetMBMin","PeakWorkingSetMBMax"
-"Tree-sitter","small.p","5","0.559","0.552","0.519","0.614","4157.1","4198.9","0.094","0.09","193.308","193.31","193.02","193.54"
-"ProParse","small.p","5","3.3358","3.4","3.202","3.455",,,"2.3528","2.358","10.308","10.32","10.24","10.36"
-"Tree-sitter","medium.cls","5","3.643","3.649","3.485","3.849","5609.92","5594.9","1.8998","1.859","191.714","191.13","190.73","194.47"
-"ProParse","medium.cls","5","13.285","12.161","11.936","17.27",,,"10.1756","9.381","10.32","10.32","10.3","10.33"
-"Tree-sitter","large.p","5","6.9678","6.964","6.733","7.412","41107.62","41082.4","6.8512","6.841","191.678","191.68","191.23","192.27"
-"ProParse","large.p","5","91.9948","90.244","86.382","99.532",,,"79.003","74.294","10.328","10.34","10.28","10.36"

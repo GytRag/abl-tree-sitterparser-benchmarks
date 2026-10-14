@@ -48,8 +48,10 @@ public class BenchmarkProParse {
 
         double avgMs = ((t1 - t0) / 1_000_000.0) / benchRuns;
         double memUsedMb = (endMem - startMem) / (1024.0 * 1024.0);
+        double throughputKBps = (Files.size(file.toPath()) / 1024.0) / (avgMs / 1000.0);
 
         System.out.printf("[Full Parse] Average Latency: %.3f ms%n", avgMs);
+        System.out.printf("[Full Parse] Throughput:      %.1f KB/s%n", throughputKBps);
         System.out.printf("[Memory]     Heap Allocated:   %.2f MB%n", Math.max(0, memUsedMb));
 
         byte[] originalSource = Files.readAllBytes(file.toPath());
