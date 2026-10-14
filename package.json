@@ -1,4 +1,42 @@
 {
+  "name": "abl-tree-sitter-parser-benchmarks",
+  "version": "1.0.0",
+  "description": "Performance benchmarks comparing Tree-sitter (WASM) and ProParse (Java) for OpenEdge ABL parsing",
+  "main": "benchmark-treesitter.js",
+  "scripts": {
+    "bench:tree-sitter": "node benchmark-treesitter.js",
+    "bench:small": "node benchmark-treesitter.js corpus/small.p resources/tree-sitter-abl.wasm",
+    "bench:medium": "node benchmark-treesitter.js corpus/medium.cls resources/tree-sitter-abl.wasm",
+    "bench:large": "node benchmark-treesitter.js corpus/large.p resources/tree-sitter-abl.wasm"
+  },
+  "keywords": [
+    "openedge",
+    "abl",
+    "progress",
+    "parser",
+    "tree-sitter",
+    "proparse",
+    "benchmark",
+    "performance",
+    "ast",
+    "syntax-tree"
+  ],
+  "author": "Gytis Raginskas",
+  "contributors": [
+    "Gustas Mickus (gmickus@balticamadeus.com)"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GytRag/abl-tree-sitterparser-benchmarks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GytRag/abl-tree-sitterparser-benchmarks/issues"
+  },
+  "homepage": "https://github.com/GytRag/abl-tree-sitterparser-benchmarks#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "web-tree-sitter": "^0.27.0"
   }

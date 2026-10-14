@@ -1,2 +1,29 @@
+# OpenEdge ADE repository (cloned during setup)
 corpus/resources/ade
 prorefactor/
+
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# Java compiled classes
+*.class
+
+# Benchmark output directories
+benchmark-results/
+
+# Temporary files
+*.tmp
+*.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
